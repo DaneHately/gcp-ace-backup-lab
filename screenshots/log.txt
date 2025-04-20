@@ -1,0 +1,143 @@
+LEVEL: 
+NAME: process-file
+EXECUTION_ID: HVZ6eOXjtLmq
+TIME_UTC: 2025-04-20 02:15:00.750
+LOG: Exception on / [POST]
+Traceback (most recent call last):
+  File "/layers/google.python.pip/pip/lib/python3.9/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/layers/google.python.pip/pip/lib/python3.9/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/layers/google.python.pip/pip/lib/python3.9/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/layers/google.python.pip/pip/lib/python3.9/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/layers/google.python.pip/pip/lib/python3.9/site-packages/functions_framework/execution_id.py", line 106, in wrapper
+    return view_function(*args, **kwargs)
+  File "/layers/google.python.pip/pip/lib/python3.9/site-packages/functions_framework/__init__.py", line 216, in view_func
+    function(data, context)
+  File "/workspace/main.py", line 15, in process_file
+    new_blob = source_bucket.copy_blob(blob, destination_bucket, file_name)
+  File "/layers/google.python.pip/pip/lib/python3.9/site-packages/google/cloud/storage/bucket.py", line 1903, in copy_blob
+    copy_result = client._post_resource(
+  File "/layers/google.python.pip/pip/lib/python3.9/site-packages/google/cloud/storage/client.py", line 625, in _post_resource
+    return self._connection.api_request(
+  File "/layers/google.python.pip/pip/lib/python3.9/site-packages/google/cloud/storage/_http.py", line 72, in api_request
+    return call()
+  File "/layers/google.python.pip/pip/lib/python3.9/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.Forbidden: 403 POST https://storage.googleapis.com/storage/v1/b/mock-client-data/o/test8.txt/copyTo/b/my-ace-backup/o/test8.txt?prettyPrint=false: my-ace-function@linux-practice-455701.iam.gserviceaccount.com does not have storage.objects.delete access to the Google Cloud Storage object.
+
+LEVEL: I
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 02:15:00.384
+LOG: 
+
+LEVEL: 
+NAME: process-file
+EXECUTION_ID: gVy2AwWSgilT
+TIME_UTC: 2025-04-20 02:13:28.673
+LOG: File test8.txt copied to my-ace-backup
+
+LEVEL: I
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 02:13:28.263
+LOG: Default STARTUP TCP probe succeeded after 1 attempt for container "worker" on port 8080.
+
+LEVEL: I
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 02:13:26.803
+LOG: 
+
+LEVEL: 
+NAME: process-file
+EXECUTION_ID: jJv6wM7pvkei
+TIME_UTC: 2025-04-20 01:58:14.834
+LOG: File test5.txt copied to my-ace-backup
+
+LEVEL: I
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:58:14.445
+LOG: 
+
+LEVEL: 
+NAME: process-file
+EXECUTION_ID: WZAWLbul02sP
+TIME_UTC: 2025-04-20 01:57:33.752
+LOG: File test.txt copied to my-ace-backup
+
+LEVEL: I
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:57:33.336
+LOG: 
+
+LEVEL: 
+NAME: process-file
+EXECUTION_ID: XkBVAKwJe8UM
+TIME_UTC: 2025-04-20 01:57:24.474
+LOG: File test6.txt copied to my-ace-backup
+
+LEVEL: I
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:57:24.082
+LOG: Default STARTUP TCP probe succeeded after 1 attempt for container "worker" on port 8080.
+
+LEVEL: I
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:57:22.315
+LOG: 
+
+LEVEL: WARNING
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:57:09.517
+LOG: The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client
+
+LEVEL: WARNING
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:55:55.205
+LOG: The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client
+
+LEVEL: WARNING
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:54:09.112
+LOG: The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client
+
+LEVEL: WARNING
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:52:42.945
+LOG: The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client
+
+LEVEL: WARNING
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:52:08.006
+LOG: The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client
+
+LEVEL: WARNING
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:51:34.857
+LOG: The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client
+
+LEVEL: WARNING
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:50:51.822
+LOG: The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client
+
+LEVEL: WARNING
+NAME: process-file
+EXECUTION_ID: 
+TIME_UTC: 2025-04-20 01:50:11.861
+LOG: The request was not authenticated. Either allow unauthenticated invocations or set the proper Authorization header. Read more at https://cloud.google.com/run/docs/securing/authenticating Additional troubleshooting documentation can be found at: https://cloud.google.com/run/docs/troubleshooting#unauthorized-client
