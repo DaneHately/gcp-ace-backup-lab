@@ -1,3 +1,4 @@
+
 # my-ace-backup: Google Cloud Storage Backup Solution
 *By IronKube Solutions*
 
@@ -10,15 +11,15 @@ Welcome to the `my-ace-backup` project, a Google Cloud Platform (GCP) lab demons
 - Demonstrate proficiency in cloud infrastructure for freelance portfolio.
 
 ## Implementation
-- **Cloud Storage Bucket**: Created `my-ace-backup` bucket with a 30-day lifecycle policy to auto-delete outdated files, optimizing storage costs.
-- **Cloud Function with Pub/Sub**: Deployed a Python-based Cloud Function triggered by Pub/Sub to process backup tasks, ensuring serverless automation.
-- **Cloud Storage FUSE**: Configured `gcsfuse` to mount buckets as local file systems, enabling seamless file access (tested with `mock-client-data` bucket).
-- **Access Control**: Resolved ACL issues for secure bucket access, applying least-privilege principles.
+- **Cloud Storage Buckets**: Created `mock-client-data` (source) and `my-ace-backup` (destination) buckets in `us-central1` with uniform bucket-level access for simplified IAM management.
+- **Bucket Lifecycle Policy**: Configured a 30-day lifecycle policy on `my-ace-backup` to auto-delete outdated files, optimizing storage costs.
+- **Cloud Function with Pub/Sub**: Deployed a Python-based 2nd Gen Cloud Function (`process-file`) triggered by a Pub/Sub topic (`my-bucket-topic`) to copy files from `mock-client-data` to `my-ace-backup` upon upload.
+- **Access Control**: Applied IAM roles (`storage.objectViewer`, `storage.objectCreator`, `pubsub.subscriber`, `cloudfunctions.invoker`) to the service account `my-ace-function@linux-practice-455701.iam.gserviceaccount.com` for secure operations.
 
 ## Key Learnings
 - Mastered GCP services like Cloud Storage, Pub/Sub, and Cloud Functions for real-world applications.
-- Gained hands-on experience with `gcsfuse` for hybrid cloud workflows, a valuable skill for cloud infrastructure projects.
 - Strengthened debugging skills by resolving permission and configuration issues, critical for client-facing work.
+- Gained hands-on experience with serverless automation, a valuable skill for cloud infrastructure projects.
 
 ## About IronKube Solutions
 **IronKube Solutions** provides expert cloud infrastructure services, focusing on Terraform, Kubernetes, and GCP. With certifications like Google ACE (in progress), AWS Solutions Architect Associate, and Certified Kubernetes Administrator (planned), we deliver reliable, scalable solutions for modern DevOps needs. Contact us at [ironkubesolutions.com](https://ironkubesolutions.com) (coming soon).
@@ -28,4 +29,4 @@ Welcome to the `my-ace-backup` project, a Google Cloud Platform (GCP) lab demons
 - Check out other projects in my portfolio (e.g., Terraform and Kubernetes labs, coming soon).
 - Reach out for freelance cloud engineering services!
 
-*Last updated*.
+*Last updated: April 20, 2025*
