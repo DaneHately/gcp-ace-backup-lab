@@ -3,7 +3,7 @@
 *By IronKube Solutions*
 
 ## Overview
-Welcome to the `my-ace-backup` project, a Google Cloud Platform (GCP) lab demonstrating cloud storage automation, built by **IronKube Solutions**, a freelance cloud engineering consultancy specializing in Terraform and Kubernetes. This project showcases skills in GCP Cloud Storage, Cloud Functions, and Pub/Sub, developed as part of preparation for the Google Associate Cloud Engineer (ACE) certification.
+Welcome to the `my-ace-backup` project, one of my first projects, a Google Cloud Platform (GCP) lab demonstrating cloud storage automation, built by **IronKube Solutions**, a freelance cloud engineering consultancy specializing in Terraform and Kubernetes. This project showcases skills in GCP Cloud Storage, Cloud Functions, and Pub/Sub, developed as part of preparation for the Google Associate Cloud Engineer (ACE) certification.
 
 ## Project Goals
 - Design a scalable backup system using GCP Cloud Storage.
